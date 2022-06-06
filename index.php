@@ -26,13 +26,18 @@
 //$aluno->setDeslogin("aluno");
 //$aluno->setDessenha("@lun0");
 //$aluno->insert();
-//echo $aluno; 
+//echo $aluno;
+
+//atualizar dados do usuário
+//$usuario= new Usuario();
+//$usuario->loadById(8);
+//$usuario->update("professor","professor123");
+//echo $usuario;
 
 $usuario= new Usuario();
-$usuario->loadById(8);
-$usuario->update("professor","professor123");
+$usuario->loadById(5);
+$usuario->delete();
 echo $usuario;
-
 
 
     

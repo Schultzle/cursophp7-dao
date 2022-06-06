@@ -175,6 +175,19 @@
 
     }
 
+    public function delete(){
+        
+        $sql = new Sql();
+        $sql->xquery("DELETE FROM tB_usuario WHERE idusuario = :ID", array(
+
+            ':ID'=>$this->getIdusario()
+        ));
+        $this->setIdusuario(0);
+        $this->setDeslogin("");
+        $this->setDessenha("");
+        $this->setDtcadastro(new DateTime());
+    }
+
     public function __toString(){
 
 
